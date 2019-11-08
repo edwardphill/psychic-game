@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Edward's Psychic Guessing Game</title>
+    <script src="../psychic-game/assets/javascript/game.js"></script>
+    <link rel="stylesheet" href="../psychic-game/assets/css/style.css" />
+  </head>
+  <body onload="init()">
+    <div class="container">
+      <h1>The Psychic Game</h1>
+      <h2>Guess what number I'm thinking of.</h2>
+      <p>Select difficulty setting:</p>
+      <button id="easyBTN" onclick="easyMode()" class="">
+        Easy: Guess in 10 attempts (default)
+      </button>
+      <button id="hardBTN" onclick="hardMode()" class="">
+        Hard: Guess in 5 attempts
+      </button>
+      <button onclick="newGame()" id="newGameButton">New Game</button>
+      <h3 id="textOutput">Enter guess below</h3>
+      <input type="number" id="inputBox" onchange="compareGuess()" />
+      <h3>Wins:</h3>
+      <h3>Losses:</h3>
+      <p>Number of previous attempts: <span id="attempts"></span></p>
+      <p>Your previous guesses:</p>
+      <p id="guessLog"></p>
+    </div>
+  </body>
+</html>
